@@ -4,7 +4,7 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <div className="flex justify-between w-full px-96">
+    <div className="md:flex justify-between w-full px-64 hidden">
       <p>© STPR. All right reserved.</p>
       <p>Privacy policy | Terms & Condition</p>
       <p>Website by STPR</p>

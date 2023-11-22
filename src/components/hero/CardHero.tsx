@@ -5,6 +5,7 @@ type Props = {
   title: string;
   description: string;
   variant: string;
+  href: string;
 };
 
 const CardHero = (props: Props) => {
@@ -30,17 +31,13 @@ const CardHero = (props: Props) => {
   }
 
   return (
-    <motion.div
-      className={`rounded-2xl w-96 ${backgroundColor} ${
-        variant === "tertiary" ? "h-96" : "h-72"
-      }`}
-    >
+    <motion.div className={`rounded-2xl w-96 ${backgroundColor} `}>
       <motion.div
-        className={`py-4 px-6 flex flex-col h-full`}
+        className={`py-4 px-6`}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        whileHover={{ scale: 1.05 }}
+        whileHover={{ scale: 1.02 }}
       >
         <h1 className="text-2xl">{props.title}</h1>
         <motion.div
@@ -50,7 +47,7 @@ const CardHero = (props: Props) => {
           transition={{ duration: 0.5 }}
         >
           <div className="flex items-end mt-40">
-            <Link href={props.title}>
+            <Link href={props.href}>
               <ArrowUpRightSquare size={60} />
             </Link>
           </div>
